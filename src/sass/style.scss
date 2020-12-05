@@ -1,9 +1,27 @@
-@import "partials/__characters";
+@import "partials/__recipes";
 
 .container {
-	padding-top: 30px;
+    padding-top: 30px;
+    margin-left: 55px;
 }
 
+h1{
+    text-align: center;
+}
+
+
+.search{
+    top: 355px;
+    margin-left: 80rem;
+    height: 50px;
+    width: 150px;
+    border: solid black 0.5px;
+}
+
+input.search{
+    padding-left: 10px;
+    font-size: 1rem;
+}
 .layout {
 	width: 100%;
 	max-width: 800px;

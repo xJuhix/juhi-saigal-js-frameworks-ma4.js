@@ -4,13 +4,13 @@ import PropTypes from "prop-types";
 
 function RecipeItem({ title, thumbnail, ingredients }) {
     return (
-        <Card>
+        <Card border="dark" style={{ width: '20rem' }} >
             <Card.Img variant="top" src={thumbnail} />
             <Card.Body>
 				<Card.Title>{title}</Card.Title>
-                <Card.Text>{ingredients}</Card.Text>
+                <Card.Text><p>Ingredients:</p>{ingredients}</Card.Text>
             </Card.Body>
-    </Card>
+        </Card>
        
     );
 }
