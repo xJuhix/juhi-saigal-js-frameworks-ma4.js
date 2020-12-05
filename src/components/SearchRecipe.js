@@ -2,7 +2,7 @@ import React from "react";
 
 
 
-function recipeSearch({ handleSearch }) {
+function RecipeSearch({ handleSearch }) {
 	return (
 		<input className="search" placeholder="Search by name..." onChange={event => handleSearch(event)} />
 		
@@ -10,4 +10,4 @@ function recipeSearch({ handleSearch }) {
 }
 
 
-export default recipeSearch;
+export default RecipeSearch;
