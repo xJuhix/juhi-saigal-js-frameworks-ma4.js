@@ -3,7 +3,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import { BrowserRouter as Router, Switch, Route, NavLink } from "react-router-dom";
 import Container from "react-bootstrap/Container";
-import Home from "../home/Home";
+import Home from "../Home";
 
 
 function Layout() {

@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import RecipeItem from "./RecipeItem";
 import { BASE_URL } from ".././constants/api";
 import SearchRecipe from "./SearchRecipe";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+
 
 function RecipeList() {
 	const [Recipes, setRecipes] = useState([]);

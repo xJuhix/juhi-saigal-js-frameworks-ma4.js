@@ -1,17 +1,17 @@
 import React from "react";
+import Card from "react-bootstrap/Card";
 import PropTypes from "prop-types";
 
 function RecipeItem({ title, thumbnail, ingredients }) {
     return (
-        <div className="col-4">
-            <div className="card mt-3">
-                <img className="card-img-top" src={thumbnail} alt=""/>
-                <div className="card-body">
-                    <h3 className="card-title">{title}</h3>
-                    <p className="card-text">{ingredients}</p>
-                </div>
-            </div>
-        </div>
+        <Card>
+            <Card.Img variant="top" src={thumbnail} />
+            <Card.Body>
+				<Card.Title>{title}</Card.Title>
+                <Card.Text>{ingredients}</Card.Text>
+            </Card.Body>
+    </Card>
+       
     );
 }
 
