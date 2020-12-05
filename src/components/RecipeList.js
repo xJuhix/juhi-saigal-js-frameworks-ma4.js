@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import RecipeItem from "./RecipeItem";
 import { BASE_URL } from ".././constants/api";
 import SearchRecipe from "./SearchRecipe";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 function RecipeList() {
 	const [Recipes, setRecipes] = useState([]);
@@ -30,19 +32,20 @@ function RecipeList() {
 
 	
 	return (
-		<div>
+		<>
 			<SearchRecipe handleSearch={recipeSearch} />
+			<Row>
 				{filteredRecipes.map(recipe => {
 					const { title, thumbnail, ingredients } = recipe;
 
 					return (
-						<div sm={6} md={3} key={recipe.title}>
+						<Col sm={6} md={3} key={recipe.title}>
 							<RecipeItem title={title} ingredients={ingredients} thumbnail={thumbnail} />
-						</div>
+						</Col>
 					);
 				})}
-
-        </div>
+			</Row>
+        </>
 	);
 }
 

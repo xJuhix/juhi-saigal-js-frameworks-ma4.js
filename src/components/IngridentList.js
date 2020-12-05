@@ -1,15 +1,16 @@
 import React from 'react';
+import Badge from 'react-bootstrap/Badge'
 
 
 function IngredientList({ ingredients }) {
 
-    const ingredients = ingredients.split(', ')
+    const ingredientsAll = ingredients.split(', ')
 
     return (
         <div>
-            <b>Ingredients: </b>
+            <p>Ingredients:</p>
             {
-                ingredients.map(i => <span class="badge badge-primary mr-1">{i}</span>)
+                ingredientsAll.map(i => <Badge class="badge badge-primary mr-1">{i}</Badge>)
             }
         </div>
     );
