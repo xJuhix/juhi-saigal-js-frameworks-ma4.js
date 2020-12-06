@@ -1,5 +1,4 @@
-import React from 'react';
-import Badge from 'react-bootstrap/Badge'
+import React from "react";
 
 
 function IngredientList({ ingredients }) {
@@ -10,8 +9,8 @@ function IngredientList({ ingredients }) {
         <div>
             <p>Ingredients:</p>
             {
-                ingredientsAll.map(i => <Badge class="badge badge-primary mr-1">{i}</Badge>)
-            }
+                ingredientsAll.map(i => ({i}
+            ))}
         </div>
     );
 }

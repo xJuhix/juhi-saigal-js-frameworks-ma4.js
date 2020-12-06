@@ -22,14 +22,18 @@
     text-overflow: ellipsis;
 }
 
-.card-text p{
-    font-weight: 700;
+.card-text{
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    
 }
 
-.card-text{
-    font-size: 1rem;
-    margin-bottom: 5px;
+.card-text p{
+    font-weight: 700;
+    background-color: white;
 }
+
+
 
 .search {
     margin: 2em 0;

@@ -8,7 +8,8 @@ function RecipeItem({ title, thumbnail, ingredients }) {
             <Card.Img variant="top" src={thumbnail} />
             <Card.Body>
 				<Card.Title>{title}</Card.Title>
-                <Card.Text><p>Ingredients:</p>{ingredients}</Card.Text>
+                    <Card.Text><p>Ingredients:</p></Card.Text>
+                        <Card.Text>{ingredients}</Card.Text>
             </Card.Body>
         </Card>
        

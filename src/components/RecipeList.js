@@ -23,11 +23,16 @@ function RecipeList() {
 	const recipeSearch = function(e) {
 		console.log(e.target.value)
 		const searchValue = e.target.value.toLowerCase();
-		const filteredArray = recipes.filter(r => {
-			return r.title.toLowerCase().startsWith(searchValue)
-		})
+			const filteredArray = recipes.filter(function(char) {
+			const lowerCaseName = char.title.toLowerCase();
+			if (lowerCaseName.startsWith(searchValue)) {
+				return true;
+			}
+			return false;
+		});
+
 		setFilteredRecipes(filteredArray);
-	}
+	};
 	
 	
 	return (
