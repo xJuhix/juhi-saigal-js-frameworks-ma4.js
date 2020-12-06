@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import RecipeItem from "./RecipeItem";
 import { BASE_URL } from ".././constants/api";
 import SearchRecipe from "./SearchRecipe";
 
 
 function RecipeList() {
-	const [Recipes, setRecipes] = useState([]);
+	const [recipes, setRecipes] = useState([]);
 	const [filteredRecipes, setFilteredRecipes] = useState([]);
 
 
@@ -22,29 +21,22 @@ function RecipeList() {
 	}, []);
 
 	const recipeSearch = function(e) {
-        console.log(e.target.value)
+		console.log(e.target.value)
 		const searchValue = e.target.value.toLowerCase();
-		const filteredArray = Recipes.filter(recipe => {
-            return recipe.title.toLowerCase().startsWith(searchValue)
-        })
-
+		const filteredArray = recipes.filter(r => {
+			return r.title.toLowerCase().startsWith(searchValue)
+		})
 		setFilteredRecipes(filteredArray);
-	};
-
+	}
+	
 	
 	return (
 		<>
 			<SearchRecipe handleSearch={recipeSearch} />
 			<Row>
-				{filteredRecipes.map(recipe => {
-					const { title, thumbnail, ingredients } = recipe;
-
-					return (
-						<Col sm={6} md={3} key={recipe.title}>
-							<RecipeItem title={title} ingredients={ingredients} thumbnail={thumbnail} />
-						</Col>
-					);
-				})}
+				{filteredRecipes.map(r => (
+					<RecipeItem key={r.title} title={r.title} thumbnail={r.thumbnail} ingredients={r.ingredients}/>
+				))}
 			</Row>
         </>
 	);

@@ -8,7 +8,9 @@ import PropTypes from "prop-types";
 function RecipeSearch({ handleSearch }) {
 	return (
 			<InputGroup className="search">
-				<FormControl placeholder="Search by name..." onChange={event => handleSearch(event)} />
+				<FormControl 
+					placeholder="Search for recipe..." 
+					onChange={event => handleSearch(event)} />
 			</InputGroup>
 	);
 }
